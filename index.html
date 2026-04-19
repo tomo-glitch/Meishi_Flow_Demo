@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>リンク集</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f5f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      background: #2563eb;
+      color: white;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    a:hover {
+      opacity: 0.9;
+    }
+    @media (max-width: 480px) {
+      .buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>リンク集</h1>
+    <div class="buttons">
+      <a href="https://example.com/1" target="_blank">ボタン1</a>
+      <a href="https://example.com/2" target="_blank">ボタン2</a>
+      <a href="https://example.com/3" target="_blank">ボタン3</a>
+      <a href="https://example.com/4" target="_blank">ボタン4</a>
+      <a href="https://example.com/5" target="_blank">ボタン5</a>
+      <a href="https://example.com/6" target="_blank">ボタン6</a>
+    </div>
+  </div>
+</body>
+</html>
