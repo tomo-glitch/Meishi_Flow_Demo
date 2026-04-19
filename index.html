@@ -3,64 +3,229 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>リンク集</title>
+  <title>Lite版 / Flash版 リンク集</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: #f5f7fb;
+      font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: linear-gradient(135deg, #f7faff 0%, #edf4ff 100%);
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      padding: 24px;
     }
-    .box {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      width: 90%;
-      max-width: 500px;
+
+    .container {
+      width: 100%;
+      max-width: 980px;
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 28px;
+      padding: 36px 28px;
+      box-shadow: 0 20px 50px rgba(66, 133, 244, 0.12);
+      border: 1px solid rgba(66, 133, 244, 0.12);
+    }
+
+    .title {
+      margin: 0 0 28px;
       text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #202124;
+      letter-spacing: 0.03em;
     }
-    h1 {
-      margin-bottom: 20px;
-    }
-    .buttons {
+
+    .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 24px;
     }
-    a {
-      display: block;
+
+    .section {
+      background: #fff;
+      border-radius: 22px;
+      padding: 20px;
+      border: 1px solid #e8f0fe;
+      box-shadow: 0 10px 24px rgba(60, 64, 67, 0.08);
+    }
+
+    .section-title {
+      margin: 0 0 16px;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1a73e8;
+    }
+
+    .button-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .link-button {
+      display: flex;
+      align-items: center;
+      gap: 14px;
       text-decoration: none;
-      background: #2563eb;
-      color: white;
-      padding: 14px;
-      border-radius: 10px;
-      font-weight: bold;
+      color: #202124;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid #dbe7ff;
+      border-radius: 18px;
+      padding: 15px 16px;
+      box-shadow: 0 8px 18px rgba(66, 133, 244, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
-    a:hover {
-      opacity: 0.9;
+
+    .link-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(66, 133, 244, 0.14);
+      border-color: #a8c7fa;
     }
-    @media (max-width: 480px) {
-      .buttons {
+
+    .icon-wrap {
+      width: 52px;
+      height: 52px;
+      flex-shrink: 0;
+      border-radius: 14px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 0 1px #edf2fd;
+    }
+
+    .service-icon {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .text-wrap {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .main-label {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #202124;
+      line-height: 1.3;
+    }
+
+    .sub-label {
+      margin-top: 4px;
+      font-size: 0.84rem;
+      color: #5f6368;
+      line-height: 1.3;
+    }
+
+    .note {
+      margin: 24px 0 0;
+      text-align: center;
+      font-size: 0.92rem;
+      color: #5f6368;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
         grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 28px 18px;
+      }
+
+      .title {
+        font-size: 1.6rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>リンク集</h1>
-    <div class="buttons">
-      <a href="https://example.com/1" target="_blank">ボタン1</a>
-      <a href="https://example.com/2" target="_blank">ボタン2</a>
-      <a href="https://example.com/3" target="_blank">ボタン3</a>
-      <a href="https://example.com/4" target="_blank">ボタン4</a>
-      <a href="https://example.com/5" target="_blank">ボタン5</a>
-      <a href="https://example.com/6" target="_blank">ボタン6</a>
+  <div class="container">
+    <h1 class="title">リンク集</h1>
+
+    <div class="grid">
+      <section class="section">
+        <h2 class="section-title">Lite版</h2>
+        <div class="button-list">
+          <a class="link-button" href="https://example.com/lite-sheet" target="_blank" rel="noopener noreferrer">
+            <div class="icon-wrap">
+              <img src="images/sheets.png" alt="Google Sheets" class="service-icon">
+            </div>
+            <div class="text-wrap">
+              <span class="main-label">Lite版 スプレッドシート</span>
+              <span class="sub-label">Google Sheets</span>
+            </div>
+          </a>
+
+          <a class="link-button" href="https://example.com/lite-chat" target="_blank" rel="noopener noreferrer">
+            <div class="icon-wrap">
+              <img src="images/chat.png" alt="Google Chat" class="service-icon">
+            </div>
+            <div class="text-wrap">
+              <span class="main-label">Lite版 チャットルーム</span>
+              <span class="sub-label">Google Chat</span>
+            </div>
+          </a>
+
+          <a class="link-button" href="https://example.com/lite-folder" target="_blank" rel="noopener noreferrer">
+            <div class="icon-wrap">
+              <img src="images/drive.png" alt="Google Drive" class="service-icon">
+            </div>
+            <div class="text-wrap">
+              <span class="main-label">Lite版 名刺画像フォルダ</span>
+              <span class="sub-label">Google Drive Folder</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Flash版</h2>
+        <div class="button-list">
+          <a class="link-button" href="https://example.com/flash-sheet" target="_blank" rel="noopener noreferrer">
+            <div class="icon-wrap">
+              <img src="images/sheets.png" alt="Google Sheets" class="service-icon">
+            </div>
+            <div class="text-wrap">
+              <span class="main-label">Flash版 スプレッドシート</span>
+              <span class="sub-label">Google Sheets</span>
+            </div>
+          </a>
+
+          <a class="link-button" href="https://example.com/flash-chat" target="_blank" rel="noopener noreferrer">
+            <div class="icon-wrap">
+              <img src="images/chat.png" alt="Google Chat" class="service-icon">
+            </div>
+            <div class="text-wrap">
+              <span class="main-label">Flash版 チャットルーム</span>
+              <span class="sub-label">Google Chat</span>
+            </div>
+          </a>
+
+          <a class="link-button" href="https://example.com/flash-folder" target="_blank" rel="noopener noreferrer">
+            <div class="icon-wrap">
+              <img src="images/drive.png" alt="Google Drive" class="service-icon">
+            </div>
+            <div class="text-wrap">
+              <span class="main-label">Flash版 名刺画像フォルダ</span>
+              <span class="sub-label">Google Drive Folder</span>
+            </div>
+          </a>
+        </div>
+      </section>
     </div>
+
+    <p class="note">
+      6個のURLを自分のリンクに変更して使ってください。
+    </p>
   </div>
 </body>
 </html>
